@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - StyleHub</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333; /* Adjusted text color for better readability */
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.8); /* Increased opacity for better contrast */
+            padding: 20px;
+            text-align: center;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.95); /* Slightly reduced transparency for better contrast */
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Increased shadow for a subtle lift */
+        }
+
+        h1, h2 {
+            color: #fff;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.8); /* Increased opacity for better contrast */
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .developer-image {
+            max-width: 100%;
+            border-radius: 50%;
+            margin-top: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Added shadow for a subtle lift */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to StyleHub</h1>
+    </header>
+
+    <section class="about-us">
+        <h2>About Us</h2>
+        <p>Welcome to StyleHub, where fashion meets creativity. We're dedicated to helping you create new fashion trends by exploring unique combinations of clothes. Meet our designer, Juvan Kumar, the creative mind behind StyleHub.</p>
+    </section>
+
+    <section class="designer">
+        <h2>Meet the Designer - Juvan Kumar</h2>
+        <img class="developer-image" src="{{ url_for('static', filename='developer.jpg') }}" alt="Juvan Kumar - Fashion Designer">
+        <p>Juvan Kumar is a visionary fashion designer with a passion for pushing the boundaries of fashion. With years of experience in the industry, he's the driving force behind the innovative and cutting-edge designs you'll find at StyleHub.</p>
+    </section>
+
+    <section class="mission">
+        <h2>Our Mission</h2>
+        <p>At StyleHub, our mission is to empower you to express yourself through fashion. We believe that everyone is a designer, and our platform allows you to experiment with clothing combinations, discover your unique style, and set new trends.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 StyleHub. All rights reserved.</p>
+    </footer>
+</body>
+</html>

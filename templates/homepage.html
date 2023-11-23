@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Design</title>
+    <link rel="stylesheet" href="/static/styles1.css"> <!-- Link to your CSS file -->
+    <style>
+        /* Add this CSS style to change the color of the text */
+        .hero-content h1 {
+            color: red;
+        }
+
+        /* Add this CSS for the person icon and dropdown */
+        .user-icon {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+        }
+
+        .dropdown {
+            display: none;
+            position: fixed;
+            top: 40px;
+            right: 10px;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown a {
+            padding: 12px 16px;
+            display: block;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .dropdown a:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <nav class="navbar">
+            <ul>
+                <li><a href='/collections'>Collections</a></li>
+                <li><a href='/aboutus'>About Us</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to the World of Fashion</h1>
+            <p>Discover Your Style</p>
+            <a href="#" class="cta-button">Get Started</a>
+        </div>
+    </section>
+
+    <section class="featured-collections">
+        <h2>Featured Collections</h2>
+        <div class="collection-card">
+            <img src="{{ url_for('static', filename='collection1.jpg') }}" alt="Collection 1" height="200" width="400">
+            <h3>Collection 1</h3>
+            <p>Description of the collection.</p>
+        </div>
+        <div class="collection-card">
+            <img src="{{ url_for('static', filename='collection2.jpg') }}" alt="Collection 2" height="200" width="400">
+            <h3>Collection 2</h3>
+            <p>Description of the collection.</p>
+        </div>
+        <div class="collection-card">
+            <img src="{{ url_for('static', filename='collection3.jpg') }}" alt="Collection 3" height="200" width="400">
+            <h3>Collection 3</h3>
+            <p>Description of the collection.</p>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <p>&copy; 2023 Fashion Design</p>
+    </footer>
+
+    <!-- Add the person icon and dropdown -->
+    <div class="user-icon" onclick="toggleDropdown()">
+        <img src="static/user.jpg" alt="Person Icon" width="30" height="30">
+        <div class="dropdown" id="dropdown">
+            <a href="/edit_profile">Edit Profile</a>
+            <a href="#">Delete</a>
+            <a href="/login">Logout</a>
+        </div>
+    </div>
+
+    <!-- Add this script for dropdown functionality -->
+    <script>
+        function toggleDropdown() {
+            var dropdown = document.getElementById("dropdown");
+            dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+        }
+    </script>
+</body>
+</html>

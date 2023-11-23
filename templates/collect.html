@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion Design Studio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles2.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Fashion Design Studio</h1>
+    </header>
+
+    <div class="container">
+        <h2>Our Products</h2>
+        <div class="products">
+            <div class="product">
+                <img src="{{ url_for('static', filename='capphoto.jpg') }}" alt="Caps">
+                <h3>Caps</h3>
+            </div>
+            <div class="product">
+                <img src="{{ url_for('static', filename='Shirtimage.jpg')}}" alt="Shirts">
+                <h3>Shirts</h3>
+            </div>
+            <div class="product">
+                <img src="{{ url_for('static', filename='jacketimages.jpg')}}" alt="Jackets">
+                <h3>Jackets</h3>
+            </div>
+            <div class="product">
+                <img src="{{ url_for('static', filename='hoodie.jpg')}}" alt="Hoodies">
+                <h3>Hoodies</h3>
+            </div>
+            <div class="product">
+                <img src="{{ url_for('static', filename='tshirt.jpg')}}" alt="T-Shirts">
+                <h3>T-Shirts</h3>
+            </div>
+            <div class="product">
+                <img src="{{ url_for('static', filename='jeansimg.jpg')}}" alt="Jeans">
+                <h3>Jeans</h3>
+            </div>
+            <div class="product">
+                <img src="{{ url_for('static', filename='trouserimg.jpg')}}" alt="Trousers">
+                <h3>Trousers</h3>
+            </div>
+            <div class="product">
+                <img src="{{ url_for('static', filename='chinosimg.jpg')}}" alt="Chinos">
+                <h3>Chinos</h3>
+            </div>
+            <div class="product">
+                <img src="{{ url_for('static', filename='sneakersimg.jpg')}}" alt="Sneakers">
+                <h3>Sneakers</h3>
+            </div>
+            <div class="product">
+                <img src="{{ url_for('static', filename='formalshoes.jpg')}}" alt="Formal Shoes">
+                <h3>Formal Shoes</h3>
+            </div>
+            <div class="product">
+                <img src="{{ url_for('static', filename='sportshoes.jpg')}}" alt="Sport Shoes">
+                <h3>Sport Shoes</h3>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2023 Fashion Design Studio
+    </footer>
+</body>
+</html>
